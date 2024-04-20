@@ -1,0 +1,30 @@
+.student_card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	max-width: 240px;
+	height: 360px;
+	border-radius: 0.5rem;
+
+	padding: 1rem 1.5rem;
+
+	background: #393e46d9;
+	color: #fff;
+	font-weight: 300;
+}
+.student_card_image {
+	width: 11.25rem;
+	height: 11.25rem;
+	border-radius: 50%;
+
+	margin-bottom: 1.5rem;
+}
+.student_card_fullname {
+	font-weight: 600;
+	margin-bottom: 0.2rem;
+}
+.student_card_group {
+	margin-bottom: 1.5rem;
+}
