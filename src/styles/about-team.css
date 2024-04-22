@@ -1,0 +1,60 @@
+.about-team {
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+.about-team h2 {
+    margin-bottom: -10px;
+}
+
+.team-slogan {
+    color: gray;
+}
+
+.text-photo {
+    font-family: Inter, serif;
+    margin-top: 30px;
+}
+
+.team-text-1 {
+    display: flex;
+    max-width: 55%;
+    margin-bottom: 175px;
+}
+
+.team-text-1 p {
+    margin-top: 100px;
+}
+
+.team-photo-1 img {
+    max-width: 35%;
+    float: right;
+}
+
+.team-text-2 {
+    display: flex;
+    max-width: 55%;
+    float: right;
+}
+
+.team-text-2 p {
+    margin-top: 125px;
+}
+
+.team-photo-2 img {
+    max-width: 35%;
+    float: left;
+}
+
+.team-text-3 {
+    float: left;
+    max-width: 55%;
+    margin-top: 225px;
+}
+
+.team-photo-3 img {
+    max-width: 35%;
+    float: right;
+    margin-top: 200px;
+}

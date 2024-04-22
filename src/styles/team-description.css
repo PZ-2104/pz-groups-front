@@ -1,0 +1,13 @@
+.team-description {
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.team-description .description {
+    margin-bottom: 10px;
+}
