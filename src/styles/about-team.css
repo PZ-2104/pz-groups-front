@@ -1,7 +1,6 @@
 .about-team {
     background-color: white;
     color: black;
-    padding: 20px;
 }
 
 .about-team h2 {
@@ -17,44 +16,88 @@
     margin-top: 30px;
 }
 
-.team-text-1 {
-    display: flex;
-    max-width: 55%;
-    margin-bottom: 175px;
+/* Desktop styles */
+@media only screen and (min-width: 768px) {
+    .team-description {
+        padding: 70px;
+    }
+
+    .about-team {
+        padding: 70px;
+    }
+
+    .text-photo-1,
+    .text-photo-2,
+    .text-photo-3 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text-photo-2 {
+        flex-direction: row-reverse;
+    }
+
+    .team-text-1,
+    .team-text-3 {
+        margin-top: 100px;
+        max-width: 50%;
+    }
+
+    .team-text-3 {
+        margin-top: 200px;
+    }
+
+    .team-text-2 {
+        margin-top: 175px;
+        max-width: 45%;
+    }
+
+    .team-photo-1 img,
+    .team-photo-3 img {
+        margin-left: 70px;
+        max-width: 90%;
+    }
+
+    .team-photo-3 img {
+        margin-top: 50px;
+        max-width: 90%;
+    }
+
+    .team-photo-2 img {
+        margin-top: 50px;
+        max-width: 90%;
+
+    }
 }
 
-.team-text-1 p {
-    margin-top: 100px;
-}
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+    .team-description {
+        padding: 20px;
+    }
 
-.team-photo-1 img {
-    max-width: 35%;
-    float: right;
-}
+    .about-team {
+        padding: 20px;
+    }
 
-.team-text-2 {
-    display: flex;
-    max-width: 55%;
-    float: right;
-}
+    .team-text-1,
+    .team-text-2,
+    .team-text-3 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
-.team-text-2 p {
-    margin-top: 125px;
-}
+    .team-photo-1,
+    .team-photo-2,
+    .team-photo-3 {
+        max-width: 100%;
+        text-align: center;
+    }
 
-.team-photo-2 img {
-    max-width: 35%;
-    float: left;
-}
-
-.team-text-3 {
-    float: left;
-    max-width: 55%;
-    margin-top: 225px;
-}
-
-.team-photo-3 img {
-    max-width: 35%;
-    float: right;
-    margin-top: 200px;
+    .team-photo-1 img,
+    .team-photo-2 img,
+    .team-photo-3 img {
+        max-width: 100%;
+        height: auto;
+    }
 }
