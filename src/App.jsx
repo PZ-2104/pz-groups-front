@@ -57,7 +57,7 @@ function App() {
 							</p>
 						</div>
 						<div className="team-photo-1">
-							<img src={TeamPhoto1} alt="Team Photo 1"/>
+							<img src={TeamPhoto1} alt="Team Photo 1" />
 						</div>
 					</div>
 					<div className="text-photo-2">
@@ -72,7 +72,7 @@ function App() {
 							</p>
 						</div>
 						<div className="team-photo-2">
-							<img src={TeamPhoto2} alt="Team Photo 2"/>
+							<img src={TeamPhoto2} alt="Team Photo 2" />
 						</div>
 					</div>
 					<div className="text-photo-3">

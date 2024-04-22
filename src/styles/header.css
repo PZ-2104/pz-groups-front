@@ -26,10 +26,6 @@
     align-items: center;
 }
 
-.gallery {
-    margin-left: 10px;
-}
-
 .dropdown select {
-    margin-left: 10px;
+    margin-left: 20px;
 }
