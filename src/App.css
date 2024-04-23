@@ -2,28 +2,37 @@ section {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	font-size: 1rem;
 }
 .section_title {
-	margin: 100px auto;
+	margin: 50px auto 0;
 
-	font-size: 2rem;
+	font-size: 2em;
 	font-weight: 800;
-	line-height: 1.5rem;
+	line-height: 1.5em;
 	text-align: left;
-}
-.red_word {
-	color: #e1314b;
-}
-.cards_title {
-	font-size: 2rem;
-	font-weight: 800;
-	line-height: 1.5rem;
 }
 .cards_container {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	gap: 3rem;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+.red_word {
+	line-height: 1.5;
+	color: #e1314b;
+}
 
-	margin-bottom: 4rem;
+/* MEDIA */
+
+@media screen and (max-width: 600px) {
+	section {
+		font-size: 0.9rem;
+		justify-content: center;
+	}
+	.cards_container {
+		justify-content: center;
+		gap: 1.5em;
+	}
 }

@@ -2,29 +2,33 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 
-	max-width: 240px;
-	height: 360px;
+	height: auto;
+	/* height: 23em; */
+	width: 12em;
 	border-radius: 0.5rem;
 
-	padding: 1rem 1.5rem;
+	padding: 1em 1.5em;
 
 	background: #393e46d9;
 	color: #fff;
 	font-weight: 300;
+	font-size: 0.8rem;
 }
 .student_card_image {
-	width: 11.25rem;
-	height: 11.25rem;
+	width: 11.25em;
+	height: 11.25em;
 	border-radius: 50%;
-
-	margin-bottom: 1.5rem;
 }
 .student_card_fullname {
 	font-weight: 600;
-	margin-bottom: 0.2rem;
+	font-size: 1.1em;
 }
 .student_card_group {
-	margin-bottom: 1.5rem;
+	font-size: 1.1em;
+}
+.student_card_role {
+	text-align: center;
+	font-size: 1.1em;
 }
