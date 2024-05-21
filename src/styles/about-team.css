@@ -3,8 +3,16 @@
     color: black;
 }
 
+.about-team span {
+    color: #E1314B;
+}
+
 .about-team h2 {
     margin-bottom: -10px;
+}
+
+.our-team h2 {
+    font-family: Inter, serif;
 }
 
 .team-slogan {
@@ -18,6 +26,10 @@
 
 /* Desktop styles */
 @media only screen and (min-width: 768px) {
+    .our-team h2 {
+        font-size: 24px;
+    }
+
     .team-description {
         padding: 70px;
     }
@@ -78,6 +90,18 @@
 
     .about-team {
         padding: 20px;
+    }
+
+    .our-team {
+        font-size: 16px;
+    }
+
+    .team-slogan {
+        font-size: 12px;
+    }
+
+    .text-photo {
+        font-size: 14px;
     }
 
     .team-text-1,

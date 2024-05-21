@@ -6,8 +6,27 @@
 
 .title {
     text-align: center;
+    font-family: Inter, serif;
 }
 
-.team-description .description {
-    margin-bottom: -50px;
+/* Desktop styles */
+@media only screen and (min-width: 768px) {
+    .team-description .description {
+        margin-bottom: -70px; /* зменшуємо відступ між елементами на великих екранах */
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+    .title {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 11px;
+    }
 }

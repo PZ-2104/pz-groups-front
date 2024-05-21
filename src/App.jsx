@@ -29,9 +29,10 @@ function App() {
 					</div>
 				</div>
 			</div>
+
 			<div className="team-description">
 				<div className="title">
-					<h1>Hello, this is the site of PZ-2104</h1>
+					<h2>Hello, this is the site of PZ-2104</h2>
 				</div>
 				<p className="description">
 					Our group of students at the university is characterized by a high level of enthusiasm and
@@ -40,10 +41,10 @@ function App() {
 					of the university environment and enrich the learning experience.
 				</p>
 			</div>
-			<div className="about-team">
-				<h2 className="our-team">Our Team</h2>
-				<p className="team-slogan">It's a team because our work is play.</p>
 
+			<div className="about-team">
+				<h2 className="our-team">Our Team<span>.</span></h2>
+				<p className="team-slogan">It's a team because our work is play.</p>
 				<div className="text-photo">
 					<div className="text-photo-1">
 						<div className="team-text-1">
@@ -87,7 +88,7 @@ function App() {
 							</p>
 						</div>
 						<div className="team-photo-3">
-							<img src={TeamPhoto3} alt="Team Photo 3"/>
+							<img src={TeamPhoto3} alt="Team Photo 3" />
 						</div>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
 .header {
-    background-color: gray;
+    background-color: #393E46D9;
     color: white;
     text-align: center;
     padding: 20px;
@@ -28,4 +28,22 @@
 
 .dropdown select {
     margin-left: 20px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+    .faculty-info p {
+        font-size: 9px;
+        margin-left: -10px;
+        margin-right: 12px;
+    }
+
+    .gallery {
+        font-size: 12px;
+        margin-left: 10px
+    }
+
+    .dropdown {
+        margin-left: -10px;
+    }
 }
