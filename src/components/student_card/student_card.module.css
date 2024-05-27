@@ -4,8 +4,8 @@
 	align-items: center;
 	justify-content: space-around;
 
-	height: auto;
-	/* height: 23em; */
+	/* height: auto; */
+	height: 23em;
 	width: 12em;
 	border-radius: 0.5rem;
 
@@ -15,6 +15,20 @@
 	color: #fff;
 	font-weight: 300;
 	font-size: 0.8rem;
+
+	text-overflow: ellipsis;
+
+	overflow: hidden;
+	white-space: nowrap;
+
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+.student_card:hover {
+	scale: 1.05;
+}
+.student_card:active {
+	scale: 0.95;
 }
 .student_card_image {
 	width: 11.25em;
@@ -31,4 +45,9 @@
 .student_card_role {
 	text-align: center;
 	font-size: 1.1em;
+	text-overflow: ellipsis;
+	width: 10rem;
+	height: 2rem;
+
+	overflow: hidden;
 }
