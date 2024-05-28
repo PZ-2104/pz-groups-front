@@ -93,11 +93,13 @@
     }
 
     .our-team {
+        margin-left: 10px;
         font-size: 16px;
     }
 
     .team-slogan {
-        font-size: 12px;
+        margin-left: 10px;
+        font-size: 10px;
     }
 
     .text-photo {
@@ -107,15 +109,9 @@
     .team-text-1,
     .team-text-2,
     .team-text-3 {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .team-photo-1,
-    .team-photo-2,
-    .team-photo-3 {
-        max-width: 100%;
-        text-align: center;
+        font-size: 11px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .team-photo-1 img,

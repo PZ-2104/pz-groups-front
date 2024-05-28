@@ -1,0 +1,130 @@
+.our-projects {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.our-projects h2 {
+    font-family: Inter, serif;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.our-projects span {
+    color: #E1314B;
+}
+
+.our-projects p {
+    font-family: Inter, serif;
+    color: gray;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+.project-card-1,
+.project-card-2,
+.project-card-3,
+.project-card-4 {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.project-card-1:hover,
+.project-card-2:hover,
+.project-card-3:hover,
+.project-card-4:hover {
+    transform: translateY(-10px);
+}
+
+.project-card-1 img,
+.project-card-2 img,
+.project-card-3 img,
+.project-card-4 img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card-1 h3,
+.project-card-2 h3,
+.project-card-3 h3,
+.project-card-4 h3 {
+    font-family: Inter, serif;
+    font-size: 18px;
+    color: #333;
+    margin: 15px 0 5px 0;
+}
+
+.project-card-1 p,
+.project-card-2 p,
+.project-card-3 p,
+.project-card-4 p {
+    font-family: Inter, serif;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 768px) {
+    .project-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card-2 {
+        margin-top: 80px; /* Adjust this value as needed */
+    }
+
+    .project-card-4 {
+        margin-top: 80px; /* Adjust this value as needed */
+    }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+    .our-projects h2 {
+        font-family: Inter, serif;
+        font-size: 16px;
+        color: black;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card-2,
+    .project-card-3,
+    .project-card-4 {
+        margin-top: -10px;
+    }
+
+    .project-card-1 h3,
+    .project-card-2 h3,
+    .project-card-3 h3,
+    .project-card-4 h3 {
+        font-family: Inter, serif;
+        font-size: 14px;
+        color: #333;
+        margin: 15px 0 5px 0;
+    }
+
+    .project-card-1 p,
+    .project-card-2 p,
+    .project-card-3 p,
+    .project-card-4 p {
+        font-family: Inter, serif;
+        margin: 0 0 15px 0;
+        font-size: 12px;
+    }
+}

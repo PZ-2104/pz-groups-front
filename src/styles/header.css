@@ -26,8 +26,11 @@
     align-items: center;
 }
 
-.dropdown select {
-    margin-left: 20px;
+/* Desktop styles */
+@media only screen and (min-width: 768px) {
+    .dropdown select {
+        margin-left: 20px;
+    }
 }
 
 /* Mobile styles */
@@ -40,10 +43,7 @@
 
     .gallery {
         font-size: 12px;
-        margin-left: 10px
-    }
-
-    .dropdown {
-        margin-left: -10px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }

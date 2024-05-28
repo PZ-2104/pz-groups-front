@@ -1,0 +1,72 @@
+.project-page {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-header {
+    margin-bottom: 20px;
+}
+
+.project-header h1 {
+    font-family: Inter, serif;
+    font-size: 36px;
+    color: black;
+}
+
+.project-header p {
+    font-family: Inter, serif;
+    font-size: 18px;
+    color: gray;
+}
+
+.project-content {
+    margin: 20px 0;
+}
+
+.project-content h2 {
+    font-family: Inter, serif;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-family: Inter, serif;
+    font-size: 16px;
+    color: black;
+    margin: 10px 0;
+}
+
+.project-image {
+    margin: 20px 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-features {
+    margin-top: 20px;
+}
+
+.project-features h2 {
+    font-family: Inter, serif;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.project-features ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.project-features li {
+    font-family: Inter, serif;
+    font-size: 16px;
+    color: black;
+    margin: 5px 0;
+}
