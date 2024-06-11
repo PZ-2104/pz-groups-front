@@ -9,21 +9,21 @@ const OurTeam = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedStudent, setSelectedStudent] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("https://pz-group-back.onrender.com/api/student/");
-                const data = await response.json();
-                if (response.ok) {
-                    setStudents(data.data);
-                } else {
-                    console.error("Error fetching students:", data.error);
-                }
-            } catch (error) {
-                console.error("Error fetching students", error);
-            }
-        };
+  const fetchData = async () => {
+    try {
+      const response = await fetch("https://pz-group-back.onrender.com/api/student/");
+      const data = await response.json();
+      if (response.ok) {
+        setStudents(data.data);
+      } else {
+        console.error("Error fetching students:", data.error);
+      }
+    } catch (error) {
+      console.error("Error fetching students", error);
+    }
+  };
 
+    useEffect(() => {
         fetchData();
     }, []);
 

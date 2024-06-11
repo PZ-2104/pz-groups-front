@@ -5,7 +5,6 @@ import Project2 from "./components/Project2";
 import Project3 from "./components/Project3";
 import Project4 from "./components/Project4";
 import Home from "./components/Home";
-import OurTeam from "./sections/OurTeam/OurTeam";
 
 import "./styles/main.css";
 
@@ -18,7 +17,6 @@ function App() {
 				<Route path="/project2" element={<Project2/>}/>
 				<Route path="/project3" element={<Project3/>}/>
 				<Route path="/project4" element={<Project4/>}/>
-				<Route path="/team" element={<OurTeam/>}/>
 			</Routes>
 		</Router>
 	)

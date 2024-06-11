@@ -5,6 +5,7 @@ import TeamPhoto2 from "../assets/team_photo_2.png";
 import TeamPhoto3 from "../assets/team_photo_3.png";
 import ProjectImage from "../assets/project_image.png";
 import { Link } from "react-router-dom";
+import OurTeam from "../sections/OurTeam/OurTeam.jsx";
 
 function Home() {
     return (
@@ -110,6 +111,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <OurTeam/>
         </div>
     );
 }
