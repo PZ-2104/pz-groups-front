@@ -1,0 +1,18 @@
+.red_word {
+	line-height: 1.5;
+	color: #e1314b;
+}
+.cards_title {
+	font-size: 1.8em;
+	font-weight: 800;
+	line-height: 1.5em;
+	margin: 2.2rem 0 2rem;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 600px) {
+	.cards_title {
+		margin: 2.2rem auto 2rem;
+	}
+}
