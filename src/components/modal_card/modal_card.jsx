@@ -30,7 +30,7 @@ const ModalCard = ({ isOpen, onClose, student }) => {
         </button>
         <div className={styles.studentInfo}>
           <h2 className={styles.studentName}>
-            {student.fullName.eng} <span className={styles.redDot}>.</span>
+            {student.fullName.eng}
           </h2>
           <h3 className={styles.studentRole}>{student.role.eng}</h3>
           <p className={styles.studentDescription}>
