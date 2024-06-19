@@ -3,13 +3,22 @@ import style from "./OurTeam.module.css";
 import StudentCard from "/src/components/student_card/student_card";
 import ModalCard from "/src/components/modal_card/modal_card";
 import CardTitle from "/src/components/card_title/card_title.jsx";
+import { useAtomValue} from "jotai";
+import {localesAtom} from "../../store/locales.js";
+import localesData from "../../../locales.json";
+import {Circles} from "react-loader-spinner";
 
 const OurTeam = () => {
     const [students, setStudents] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedStudent, setSelectedStudent] = useState(null);
+  const locale = useAtomValue(localesAtom)
+  const texts = localesData[locale];
 
   const fetchData = async () => {
+    setIsLoading(true);
+
     try {
       const response = await fetch("https://pz-group-back.onrender.com/api/student/");
       const data = await response.json();
@@ -20,6 +29,8 @@ const OurTeam = () => {
       }
     } catch (error) {
       console.error("Error fetching students", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -58,116 +69,163 @@ const OurTeam = () => {
     return (
         <section id={style.our_team}>
             <h2 className={style.section_title}>
-                Our <span className={style.red_word}>team</span>{" "}
+              {texts.our1} <span className={style.red_word}>{texts.team}</span>{" "}
             </h2>
 
-            <CardTitle role="Front-end & Back-end" red_word="Developers" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("Front-End Developer").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
+            <CardTitle role="Front-end & Back-end" red_word={texts.developers} />
+          {
+            isLoading ? <Circles
+              height="40"
+              width="40"
+              color="#afafaf"
+              visible={true}
+            /> : <div className={style.cards_container}>
+              {students.length ? (
+                filterStudentsByRole("Front-End Developer").map((student) => (
+                  <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+                ))
+              ) : (
+                <p>Students not found</p>
+              )}
             </div>
+          }
 
-            <CardTitle role="Full Stack" red_word="Developers" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("Full Stack Developer").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role="Full Stack" red_word={texts.developers}/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("Full Stack Developer").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <CardTitle role="iOS" red_word="Developers" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("iOS Developer").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role="iOS" red_word={texts.developers}/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("iOS Developer").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <CardTitle role="Software" red_word="Developers" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("Software").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role="Software" red_word={texts.developers}/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("Software").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <CardTitle role="Python" red_word="Developers" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("Python Developer").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role="Python" red_word={texts.developers}/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("Python Developer").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <CardTitle role="Graphic & Web" red_word="Designers" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("Graphic Designer").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-                {students.length ? (
-                    filterStudentsByRole("Web Designer").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role={texts.graphAndWeb} red_word={texts.designers}/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("Graphic Designer").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+            {students.length ? (
+              filterStudentsByRole("Web Designer").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <CardTitle role="System" red_word="Administrator" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("System Administrator").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role={texts.system} red_word={texts.admin}/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("System Administrator").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <CardTitle role="Sales" red_word="Managers" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("Manager").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role="Sales" red_word={texts.managers}/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("Manager").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <CardTitle role="Team" red_word="Leads" />
-            <div className={style.cards_container}>
-                {students.length ? (
-                    filterStudentsByRole("Team Lead").map((student) => (
-                        <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)} />
-                    ))
-                ) : (
-                    <p>Students not found</p>
-                )}
-            </div>
+          <CardTitle role="Team" red_word="Leads"/>
+          {isLoading ? <Circles
+            height="40"
+            width="40"
+            color="#afafaf"
+            visible={true}
+          /> : <div className={style.cards_container}>
+            {students.length ? (
+              filterStudentsByRole("Team Lead").map((student) => (
+                <StudentCard key={student._id} student={student} onClick={() => handleCardClick(student._id)}/>
+              ))
+            ) : (
+              <p>Students not found</p>
+            )}
+          </div>}
 
-            <ModalCard isOpen={isModalOpen} onClose={handleCloseModal} student={selectedStudent} />
+          <ModalCard isOpen={isModalOpen} onClose={handleCloseModal} student={selectedStudent}/>
         </section>
     );
 };

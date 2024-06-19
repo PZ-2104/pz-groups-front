@@ -17,6 +17,7 @@ function App() {
 				<Route path="/project2" element={<Project2/>}/>
 				<Route path="/project3" element={<Project3/>}/>
 				<Route path="/project4" element={<Project4/>}/>
+				<Route path="*" element={<h1>Page not found</h1>}/>
 			</Routes>
 		</Router>
 	)

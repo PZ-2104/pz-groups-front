@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from './modal_card.module.css';
+import {useAtomValue} from "jotai";
+import {localesAtom} from "../../store/locales.js";
 
 const ModalCard = ({ isOpen, onClose, student }) => {
   const [isClosing, setIsClosing] = useState(false);
+  const locale = useAtomValue(localesAtom)
 
   useEffect(() => {
     if (isOpen) {
@@ -30,11 +33,11 @@ const ModalCard = ({ isOpen, onClose, student }) => {
         </button>
         <div className={styles.studentInfo}>
           <h2 className={styles.studentName}>
-            {student.fullName.eng}
+            {locale === 'en' ? student.fullName.eng : student.fullName.ukr}
           </h2>
-          <h3 className={styles.studentRole}>{student.role.eng}</h3>
+          <h3 className={styles.studentRole}>{locale === 'en' ? student.role.eng : student.role.ukr}</h3>
           <p className={styles.studentDescription}>
-            {student.description.eng}
+            {locale === 'en' ? student.description.eng : student.description.ukr}
           </p>
           {student.github && <a href={student.github} className={styles.githubLink}>in GitHub</a>}
         </div>
