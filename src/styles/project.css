@@ -64,7 +64,6 @@ body {
     }
 
     .project-image {
-        width: 98.9vw;
         overflow: hidden;
     }
 
@@ -75,11 +74,9 @@ body {
     }
 
     .project-features {
-        text-align: right;
         margin-top: 20px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
     }
 
     .project-features span {
@@ -96,6 +93,9 @@ body {
         margin-top: -10px;
         list-style-type: disc;
         padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .project-features li {

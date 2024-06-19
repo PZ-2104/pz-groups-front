@@ -28,6 +28,11 @@
     align-items: start;
 }
 
+.project-cards a {
+    text-decoration: none;
+    color: black;
+}
+
 .project-card-1,
 .project-card-2,
 .project-card-3,
