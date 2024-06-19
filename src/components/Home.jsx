@@ -6,23 +6,34 @@ import TeamPhoto3 from "../assets/team_photo_3.png";
 import ProjectImage from "../assets/project_image.png";
 import { Link } from "react-router-dom";
 import OurTeam from "../sections/OurTeam/OurTeam.jsx";
+import { localesAtom } from "../store/locales.js";
+import {useAtom} from "jotai";
+import localesData from '../../locales.json';
 
 function Home() {
+    // const setLocales = useSetAtom(localesAtom);
+    const [locale, setLocale] = useAtom(localesAtom)
+    const texts = localesData[locale];
+
+    const handleLocaleChange = (e) => {
+        setLocale(e.target.value);
+    };
+
     return (
         <div>
             <div className="header">
                 <div className="header-content">
                     <div className="faculty-info">
                         <img src={FacultyIcon} alt="Faculty Icon" height="50px" />
-                        <p>Faculty of Information Technologies and Systems</p>
+                        <p>{texts.title}</p>
                     </div>
                     <div className="actions">
                         <div className="gallery">
-                            <p>Gallery</p>
+                            <p>{texts.gallery}</p>
                         </div>
                         <div className="dropdown">
                             <label>
-                                <select>
+                                <select value={locale} onChange={handleLocaleChange}>
                                     <option value="en">EN</option>
                                     <option value="ua">UA</option>
                                 </select>
@@ -34,22 +45,20 @@ function Home() {
 
             <div className="team-description">
                 <div className="title">
-                    <h2>Hello, this is the site of PZ-2104</h2>
+                    <h2>{texts.greeting}</h2>
                 </div>
                 <p className="description">
-                    Our group of students at the university is characterized by a high level of enthusiasm and commitment to achieving high results in the field of information technology. We not only learn, but also actively apply our knowledge to create innovative solutions that contribute to the development of the university environment and enrich the learning experience.
+                    {texts.description}
                 </p>
             </div>
 
             <div className="about-team">
-                <h2 className="our-team">Our Team<span>.</span></h2>
-                <p className="team-slogan">It's a team because our work is play.</p>
+                <h2 className="our-team">{texts.ourTeam}<span>.</span></h2>
+                <p className="team-slogan">{texts.slogan}</p>
                 <div className="text-photo">
                     <div className="text-photo-1">
                         <div className="team-text-1">
-                            <p>
-                                We support each other, we love what we do, and we’re really good at it. That’s why we’ve been able to attract the best people in UX/UI design, motion graphics, mobile tech, project management, and quality assurance. It’s also why the size of our team doubles every two years. But it’s not summer camp. Our staff are professionals who can and often do work closely with our clients’ own developers. Delivering on time and on spec is just a matter of course.
-                            </p>
+                            <p>{texts.teamDesc1}</p>
                         </div>
                         <div className="team-photo-1">
                             <img src={TeamPhoto1} alt="Team Photo 1" />
@@ -57,9 +66,7 @@ function Home() {
                     </div>
                     <div className="text-photo-2">
                         <div className="team-text-2">
-                            <p>
-                                We support each other, we love what we do, and we’re really good at it. That’s why we’ve been able to attract the best people in UX/UI design, motion graphics, mobile tech, project management, and quality assurance. It’s also why the size of our team doubles every two years. But it’s not summer camp. Our staff are professionals who can and often do work closely with our clients’ own developers. Delivering on time and on spec is just a matter of course.
-                            </p>
+                            <p>{texts.teamDesc1}</p>
                         </div>
                         <div className="team-photo-2">
                             <img src={TeamPhoto2} alt="Team Photo 2" />
@@ -67,9 +74,7 @@ function Home() {
                     </div>
                     <div className="text-photo-3">
                         <div className="team-text-3">
-                            <p>
-                                We support each other, we love what we do, and we’re really good at it. That’s why we’ve been able to attract the best people in UX/UI design, motion graphics, mobile tech, project management, and quality assurance. It’s also why the size of our team doubles every two years. But it’s not summer camp. Our staff are professionals who can and often do work closely with our clients’ own developers. Delivering on time and on spec is just a matter of course.
-                            </p>
+                            <p>{texts.teamDesc1}</p>
                         </div>
                         <div className="team-photo-3">
                             <img src={TeamPhoto3} alt="Team Photo 3" />
@@ -79,34 +84,34 @@ function Home() {
             </div>
 
             <div className="our-projects">
-                <h2><span>Our</span> Projects</h2>
+                <h2><span>{texts.our}</span> {texts.projects}</h2>
                 <div className="project-cards">
                     <div className="project-card-1">
                         <Link to="/project1">
                             <img src={ProjectImage} alt="Project" />
-                            <h3>Expenses Tracker</h3>
-                            <p>Finance, Tracker, Money</p>
+                            <h3>{texts.expensesTracker}</h3>
+                            <p>{texts.financeTrackerMoney}</p>
                         </Link>
                     </div>
                     <div className="project-card-2">
                         <Link to="/project2">
-                            <img src={ProjectImage} alt="Project" />
-                            <h3>Expenses Tracker</h3>
-                            <p>Finance, Tracker, Money</p>
+                            <img src={ProjectImage} alt="Project"/>
+                            <h3>{texts.expensesTracker}</h3>
+                            <p>{texts.financeTrackerMoney}</p>
                         </Link>
                     </div>
                     <div className="project-card-3">
                         <Link to="/project3">
-                            <img src={ProjectImage} alt="Project" />
-                            <h3>Expenses Tracker</h3>
-                            <p>Finance, Tracker, Money</p>
+                            <img src={ProjectImage} alt="Project"/>
+                            <h3>{texts.expensesTracker}</h3>
+                            <p>{texts.financeTrackerMoney}</p>
                         </Link>
                     </div>
                     <div className="project-card-4">
                         <Link to="/project4">
-                            <img src={ProjectImage} alt="Project" />
-                            <h3>Expenses Tracker</h3>
-                            <p>Finance, Tracker, Money</p>
+                            <img src={ProjectImage} alt="Project"/>
+                            <h3>{texts.expensesTracker}</h3>
+                            <p>{texts.financeTrackerMoney}</p>
                         </Link>
                     </div>
                 </div>
