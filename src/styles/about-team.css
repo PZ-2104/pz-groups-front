@@ -50,17 +50,20 @@
     }
 
     .team-text-1,
+    .team-text-2,
     .team-text-3 {
-        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        line-height: 34px;
+        text-align: justify;
+    }
+
+    .team-text-1,
+    .team-text-3 {
         max-width: 50%;
     }
 
-    .team-text-3 {
-        margin-top: 200px;
-    }
-
     .team-text-2 {
-        margin-top: 175px;
         max-width: 45%;
     }
 

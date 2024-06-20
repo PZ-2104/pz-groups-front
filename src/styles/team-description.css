@@ -4,6 +4,10 @@
     padding: 20px;
 }
 
+.description {
+    text-align: justify;
+}
+
 .title {
     text-align: center;
     font-family: Inter, serif;
